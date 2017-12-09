@@ -4,6 +4,7 @@ import { RouterModule, Routes } from "@angular/router";
 
 import { AppComponent } from "./app.component";
 import { HeaderComponent } from "./common/header/header.component";
+import { FooterComponent } from './common/footer/footer.component';
 
 const appRoutes: Routes = [
 /*   { path: "", component: SearchPageComponent },
@@ -14,7 +15,8 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
 	BrowserModule,
