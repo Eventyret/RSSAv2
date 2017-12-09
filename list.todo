@@ -1,5 +1,5 @@
 Pages
-☐ Search @high
+✔ Search @high @done (2017-12-9 18:37:32)
 ☐ Info @high
 ☐  404 @high
 
@@ -12,31 +12,31 @@ Search Components
 	-Searchbox
 	☐Generate Component
 	☐ Style Component
-  ☐ Wire up Component
-  ☐ Input & Output
+  	☐ Wire up Component
+  	☐ Input & Output
 
 	- Search Results
 	☐ Generate Component
-  ☐ Style Component
-  ☐ Wire up Component
-  ☐ Input & Output
+  	☐ Style Component
+  	☐ Wire up Component
+  	☐ Input & Output
 
 Info Components
 
   - Poster
 	☐Generate Component
 	☐ Style Component
-  ☐ Wire up Component
+  	☐ Wire up Component
 
   -Infobox
 	☐Generate Component
 	☐ Style Component
-  ☐ Wire up Component
+  	☐ Wire up Component
 
   -Buttons
-  ☐Generate Component
+	☐Generate Component
 	☐ Style Component
-  ☐ Wire up Component
+	☐ Wire up Component
 
 Services
 ☐ FanArt Api (Backgrounds)
