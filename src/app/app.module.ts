@@ -4,11 +4,12 @@ import { RouterModule, Routes } from "@angular/router";
 
 import { AppComponent } from "./app.component";
 import { HeaderComponent } from "./common/header/header.component";
-import { FooterComponent } from './common/footer/footer.component';
+import { FooterComponent } from "./common/footer/footer.component";
+import { SearchPageComponent } from "./pages/search-page/search-page.component";
 
 const appRoutes: Routes = [
-/*   { path: "", component: SearchPageComponent },
-  { path: "info", component: InfoViewComponent },
+{ path: "", component: SearchPageComponent },
+ /* { path: "info", component: InfoViewComponent },
   { path: "404-not-found", component: PageNotFoundComponent}
   { path: "**", component: PageNotFoundComponent } */
 ];
@@ -16,7 +17,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    SearchPageComponent
   ],
   imports: [
 	BrowserModule,
