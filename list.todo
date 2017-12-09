@@ -1,0 +1,51 @@
+Pages
+☐ Search @high
+☐ Info @high
+☐  404 @high
+
+Shared Components
+☐ Header
+☐ Footer
+
+Search Components
+
+	-Searchbox
+	☐Generate Component
+	☐ Style Component
+  ☐ Wire up Component
+  ☐ Input & Output
+
+	- Search Results
+	☐ Generate Component
+  ☐ Style Component
+  ☐ Wire up Component
+  ☐ Input & Output
+
+Info Components
+
+  - Poster
+	☐Generate Component
+	☐ Style Component
+  ☐ Wire up Component
+
+  -Infobox
+	☐Generate Component
+	☐ Style Component
+  ☐ Wire up Component
+
+  -Buttons
+  ☐Generate Component
+	☐ Style Component
+  ☐ Wire up Component
+
+Services
+☐ FanArt Api (Backgrounds)
+☐ OMDB Api
+☐  Radarr & Sonarr Api
+
+ErrorHandling
+☐ Global Handler
+☐ 404 Handler
+
+
+
