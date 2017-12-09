@@ -5,14 +5,20 @@ import { RouterModule, Routes } from "@angular/router";
 import { AppComponent } from "./app.component";
 import { HeaderComponent } from "./common/header/header.component";
 
-
+const appRoutes: Routes = [
+/*   { path: "", component: SearchPageComponent },
+  { path: "info", component: InfoViewComponent },
+  { path: "404-not-found", component: PageNotFoundComponent}
+  { path: "**", component: PageNotFoundComponent } */
+];
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent
   ],
   imports: [
-    BrowserModule
+	BrowserModule,
+	RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
