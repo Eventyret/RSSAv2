@@ -1,22 +1,26 @@
 import { MovieQuotesService } from "./../../services/movie-quotes.service";
 import { Component, OnInit } from "@angular/core";
+import "rxjs/operators/map";
 
 @Component({
-  selector: "app-page-not-found",
-  templateUrl: "./page-not-found.component.html",
-  styleUrls: ["./page-not-found.component.scss"]
+	selector: "app-page-not-found",
+	templateUrl: "./page-not-found.component.html",
+	styleUrls: ["./page-not-found.component.scss"]
 })
 export class PageNotFoundComponent implements OnInit {
-	quotes: any[];
+	quotesArray: any[];
 
-  constructor(private service: MovieQuotesService) { }
+	constructor(private service: MovieQuotesService) {}
 
-  ngOnInit(){
-	  this.service.getQuotes()
-	  .subscribe(response => {
-		  this.quotes = response.json();
-		  console.log(this.quotes);
-	  });
-  }
+	ngOnInit() {}
 
+	getData() {
+		this.service.getQuotes().subscribe(resp => {
+			this.quotesArray = resp.data;
+			console.log(this.quotesArray);
+		});
+	}
+	quotes() {
+		const text = "Saddle Up Cowboy";
+	}
 }
