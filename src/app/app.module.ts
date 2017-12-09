@@ -7,6 +7,8 @@ import { HeaderComponent } from "./common/header/header.component";
 import { FooterComponent } from "./common/footer/footer.component";
 import { SearchPageComponent } from "./pages/search-page/search-page.component";
 import { PageNotFoundComponent } from "./pages/page-not-found/page-not-found.component";
+import { MovieQuotesService } from "./services/movie-quotes.service";
+import { HttpModule } from "@angular/http";
 
 const appRoutes: Routes = [
 { path: "", component: SearchPageComponent },
@@ -24,9 +26,12 @@ const appRoutes: Routes = [
   ],
   imports: [
 	BrowserModule,
-	RouterModule.forRoot(appRoutes)
+	RouterModule.forRoot(appRoutes),
+	HttpModule
   ],
-  providers: [],
+  providers: [
+	  MovieQuotesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
