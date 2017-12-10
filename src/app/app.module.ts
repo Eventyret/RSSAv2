@@ -9,6 +9,7 @@ import { SearchPageComponent } from "./pages/search-page/search-page.component";
 import { PageNotFoundComponent } from "./pages/page-not-found/page-not-found.component";
 import { MovieQuotesService } from "./services/movie-quotes.service";
 import { HttpModule } from "@angular/http";
+import { InfoPageComponent } from './pages/info-page/info-page.component';
 
 const appRoutes: Routes = [
 { path: "", component: SearchPageComponent },
@@ -22,7 +23,8 @@ const appRoutes: Routes = [
     HeaderComponent,
     FooterComponent,
     SearchPageComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    InfoPageComponent
   ],
   imports: [
 	BrowserModule,
