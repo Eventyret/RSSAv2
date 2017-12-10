@@ -1,13 +1,22 @@
-import { Http } from "@angular/http";
+import { Http, Response } from "@angular/http";
 import { Injectable } from "@angular/core";
+import "rxjs/add/operator/map";
+import "rxjs/add/operator/catch";
+import { Observable } from "rxjs/Observable";
 
 @Injectable()
 export class MovieQuotesService {
+	private url = "https://bella.digitalfairytales.net/api/1.1/tables/moviequotes/rows";
 	constructor(private http: Http) {}
 
-	quotes: Object;
+		private handleError(error: Response) {
+		console.log(error);
+			return Observable.throw(error);
+		}
+
 	getQuotes() {
-		this.http.get("https://bella.digitalfairytales.net/api/1.1/tables/moviequotes/rows")
-		.subscribe(response => console.log(response.json()));
+		return this.http.get(this.url)
+		.map(res => res.json())
+		.catch(this.handleError);
 	}
 }
