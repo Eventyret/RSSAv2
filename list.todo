@@ -1,29 +1,29 @@
 Pages
-✔ Search @high @done (2017-12-9 18:37:32)
-☐ Info @high
-✔ 404 @high @done (2017-12-9 19:04:37)
+	✔ Search @high @done (2017-12-9 18:37:32)
+	☐ Info @high
+	✔ 404 @high @done (2017-12-9 19:04:37)
 
 Shared Components
-✔ Header @done (2017-12-9 18:10:25)
-✔ Footer @done (2017-12-9 18:31:43)
+	✔ Header @done (2017-12-9 18:10:25)
+	✔ Footer @done (2017-12-9 18:31:43)
 
 Search Components
 
-	-Searchbox
+  -Search Box
 	☐Generate Component
 	☐ Style Component
   	☐ Wire up Component
   	☐ Input & Output
 
-	- Search Results
-	☐ Generate Component
+  -Search Box
+	☐Generate Component
   	☐ Style Component
   	☐ Wire up Component
   	☐ Input & Output
 
 Info Components
 
-  - Poster
+  -Poster
 	☐Generate Component
 	☐ Style Component
   	☐ Wire up Component
@@ -45,18 +45,24 @@ Info Components
 	☐ Finish Styling
 
 Services
-☐ FanArt Api (Backgrounds)
-☐ OMDB Api
-☐  Radarr & Sonarr Api
-✔ Quote API @done (2017-12-10 21:26:39)
+	☐ FanArt Api (Backgrounds)
+	☐ OMDB Api
+	☐  Radarr & Sonarr Api
+	✔ Quote API @done (2017-12-10 21:26:39)
 
 ErrorHandling
-☐ Global Handler
-☐ 404 Handler
+	☐ Global Handler
+	☐ 404 Handler
 
 Cleanup
-☐ Move APIs
-☐ Create Enviroment Development
-☐ Create Enviroment Production
+	☐ Move APIs
+	☐ Create Enviroment Development
+	☐ Create Enviroment Production
 
+Misc Components
 
+	-Toaster
+		☐ Component
+		☐ Services
+		☐ Wire up
+	-
