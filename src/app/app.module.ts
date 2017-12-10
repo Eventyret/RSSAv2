@@ -11,8 +11,8 @@ import { MovieQuotesService } from "./services/movie-quotes.service";
 import { HttpModule } from "@angular/http";
 
 const appRoutes: Routes = [
-{ path: "", component: SearchPageComponent },
-{ path: "page-not-found", component: PageNotFoundComponent}
+{ path: "info", component: SearchPageComponent },
+{ path: "", component: PageNotFoundComponent}
  /* { path: "info", component: InfoViewComponent },
   { path: "**", component: PageNotFoundComponent } */
 ];

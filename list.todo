@@ -41,8 +41,8 @@ Info Components
 404 Components
 	✔ Generate Component @done (2017-12-9 19:05:32)
   	✔ Style Component @done (2017-12-9 19:05:34)
-  	☐ Wire up Component
-  	☐ Input & Output
+  	✔ Wire up Component @done (2017-12-10 13:58:13)
+  	✔ Input & Output @done (2017-12-10 16:16:50)
 
 Services
 ☐ FanArt Api (Backgrounds)

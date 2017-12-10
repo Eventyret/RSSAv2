@@ -9,18 +9,33 @@ import "rxjs/operators/map";
 })
 export class PageNotFoundComponent implements OnInit {
 	quotesArray: any[];
+	text: string;
 
 	constructor(private service: MovieQuotesService) {}
 
-	ngOnInit() {}
-
-	getData() {
-		this.service.getQuotes().subscribe(resp => {
-			this.quotesArray = resp.data;
-			console.log(this.quotesArray);
-		});
+	ngOnInit() {
+		this.getData();
 	}
+
+	/**
+	 * Getting the data from the service
+	 */
+	getData() {
+		this.service.getQuotes().subscribe(
+			quote => {
+				this.quotesArray = quote.data;
+				// console.log(this.quotesArray); // for debugging
+			}
+		);
+	}
+
+	/**
+	 * When a user clicks the new quote it will get a new quote from the service
+	 */
 	quotes() {
-		const text = "Saddle Up Cowboy";
+		const random = Math.floor(Math.random() * this.quotesArray.length);
+		const randomElement = this.quotesArray[random];
+		// console.log(randomElement); // for debugging
+		this.text = randomElement;
 	}
 }
