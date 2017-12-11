@@ -12,11 +12,11 @@ Search Components
   -Search Box
 	✔ Generate Component @done (2017-12-10 22:26:30)
 	☐ Style Component
-  	☐ Wire up Component
+  	✔ Wire up Component @done (2017-12-11 21:49:46)
   	☐ Input & Output
 
-  -Search Box
-	☐Generate Component
+  -Search Results
+	✔ Generate Component @done (2017-12-11 21:49:43)
   	☐ Style Component
   	☐ Wire up Component
   	☐ Input & Output
@@ -46,7 +46,7 @@ Info Components
 
 Services
 	☐ FanArt Api (Backgrounds)
-	☐ OMDB Api
+	✔ OMDB Api @done (2017-12-11 21:49:55)
 	☐  Radarr & Sonarr Api
 	✔ Quote API @done (2017-12-10 21:26:39)
 
