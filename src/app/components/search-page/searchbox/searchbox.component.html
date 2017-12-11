@@ -4,7 +4,7 @@
 			<div class="row">
 				<form [formGroup]="form">
 					<div class="input-group input-group-lg">
-						<input formControlName="search" type="text" class="form-control" id="searchText" placeholder="Search for any move or series and press enter...">
+						<input formControlName="search" type="text" class="form-control" id="searchText" [(ngModel)]="searchQuery" placeholder="Search for any move or series and press enter...">
 						<span class="input-group-btn">
 							<input type="submit" id="searchbutton" (click)="searchMovies(searchQuery)" class="btn btn-primary" value="Go" [disabled]="!search.valid">
 						</span>
