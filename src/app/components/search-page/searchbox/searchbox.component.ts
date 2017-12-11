@@ -14,10 +14,10 @@ export class SearchBoxComponent implements OnInit {
 	get search() {
 		return this.form.get("search");
 	}
-	constructor() {}
+	constructor(private omdbSearch: SearchService ) {}
 
 	searchMovies(query: string) {
-		return this.searchService.getMovies(query).subscribe(
+		return this.omdbSearch.getMovies(query).subscribe(
 			data => {
 				this.handleSuccess(data);
 			},
