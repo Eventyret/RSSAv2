@@ -62,7 +62,10 @@ Cleanup
 Misc Components
 
 	-Toaster
-		☐ Component
+		☐ Generate Component
 		☐ Services
-		☐ Wire up
-	-
+		☐ Wire up Component
+	-Loading Spinner
+		☐  Generate Component
+		☐  Style Component
+		☐  Wire up Component
