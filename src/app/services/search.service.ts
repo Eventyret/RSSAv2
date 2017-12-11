@@ -25,15 +25,8 @@ export class SearchService {
 	constructor(private http: Http) {}
 
 	onlineSearch(query) {
-		console.log("Before we map away");
 		return this.http
-			.get(
-				this.OMDB_URL +
-					"?s=" +
-					query +
-					this.OMDB_STRING +
-					"&type=movie"
-			)
+			.get(this.OMDB_URL + "?s=" + query + this.OMDB_STRING +	"&type=movie")
 			.map(res => res.json());
 	}
 }
