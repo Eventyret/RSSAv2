@@ -12,6 +12,7 @@ import { HttpModule } from "@angular/http";
 import { InfoPageComponent } from "./pages/info-page/info-page.component";
 import { SearchBoxComponent } from "./components/search-page/searchbox/searchbox.component";
 import { ReactiveFormsModule, FormsModule } from "@angular/forms";
+import { SearchresultsComponent } from './components/search-page/searchresults/searchresults.component';
 
 const appRoutes: Routes = [
 { path: "", component: SearchPageComponent },
@@ -27,7 +28,8 @@ const appRoutes: Routes = [
     SearchPageComponent,
     PageNotFoundComponent,
     InfoPageComponent,
-    SearchBoxComponent
+    SearchBoxComponent,
+    SearchresultsComponent
   ],
   imports: [
 	BrowserModule,
