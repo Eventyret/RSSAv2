@@ -1,4 +1,5 @@
-import { Component, OnInit } from "@angular/core";
+import { SearchService } from "./../../../services/search.service";
+import { Component } from "@angular/core";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
 
 @Component({
@@ -6,7 +7,10 @@ import { FormGroup, FormControl, Validators } from "@angular/forms";
 	templateUrl: "./searchbox.component.html",
 	styleUrls: ["./searchbox.component.scss"]
 })
-export class SearchBoxComponent implements OnInit {
+export class SearchBoxComponent {
+	omdbMovies: any[];
+
+	// Form Control
 	form = new FormGroup({
 		search: new FormControl("", Validators.required)
 	});
@@ -17,15 +21,10 @@ export class SearchBoxComponent implements OnInit {
 	constructor(private omdbSearch: SearchService ) {}
 
 	searchMovies(query: string) {
-		return this.omdbSearch.getMovies(query).subscribe(
-			data => {
-				this.handleSuccess(data);
-			},
-			error => {
-				throw error;
-			}
-		);
+		this.omdbSearch.onlineSearch(query);
+		console.log("You searched for something");
 	}
-
-	ngOnInit() {}
+	handleSuccess(data) {
+		this.omdbMovies = data.Search;
+	}
 }
