@@ -1,5 +1,5 @@
 import { SearchService } from "./../../../services/search.service";
-import { Component } from "@angular/core";
+import { Component, Output, EventEmitter } from "@angular/core";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
 
 @Component({
@@ -8,8 +8,7 @@ import { FormGroup, FormControl, Validators } from "@angular/forms";
 	styleUrls: ["./searchbox.component.scss"]
 })
 export class SearchBoxComponent {
-	omdbMovies: any[];
-
+	@Output("onResults") onResultsEmitted = new EventEmitter<any>()
 	// Form Control
 	form = new FormGroup({
 		search: new FormControl("", Validators.required)
@@ -18,13 +17,11 @@ export class SearchBoxComponent {
 	get search() {
 		return this.form.get("search");
 	}
-	constructor(private omdbSearch: SearchService ) {}
+	constructor(private omdbSearch: SearchService) {}
 
 	searchMovies(query: string) {
-		this.omdbSearch.onlineSearch(query);
-		console.log("You searched for something");
-	}
-	handleSuccess(data) {
-		this.omdbMovies = data.Search;
+		return this.omdbSearch.onlineSearch(query).subscribe(data => {
+			this.onResultsEmitted.emit(data.Search);
+		});
 	}
 }

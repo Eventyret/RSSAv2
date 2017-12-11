@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { SearchService } from "./../../../services/search.service";
+import { Component, OnInit, Input, OnChanges } from "@angular/core";
 
 @Component({
-  selector: 'app-searchresults',
-  templateUrl: './searchresults.component.html',
-  styleUrls: ['./searchresults.component.scss']
+	selector: "search-results",
+	templateUrl: "./searchresults.component.html",
+	styleUrls: ["./searchresults.component.scss"]
 })
-export class SearchresultsComponent implements OnInit {
+export class SearchresultsComponent implements OnChanges {
+	@Input("results") results: any[];
 
-  constructor() { }
+	constructor() {}
 
-  ngOnInit() {
-  }
-
+	ngOnChanges() {
+		console.log(this.results);
+	}
 }

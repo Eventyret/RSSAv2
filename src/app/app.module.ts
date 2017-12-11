@@ -1,3 +1,4 @@
+import { SearchService } from "./services/search.service";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
@@ -12,35 +13,33 @@ import { HttpModule } from "@angular/http";
 import { InfoPageComponent } from "./pages/info-page/info-page.component";
 import { SearchBoxComponent } from "./components/search-page/searchbox/searchbox.component";
 import { ReactiveFormsModule, FormsModule } from "@angular/forms";
-import { SearchresultsComponent } from './components/search-page/searchresults/searchresults.component';
+import { SearchresultsComponent } from "./components/search-page/searchresults/searchresults.component";
 
 const appRoutes: Routes = [
-{ path: "", component: SearchPageComponent },
-{ path: "not-found", component: PageNotFoundComponent},
- { path: "info", component: InfoPageComponent },
- /* { path: "**", component: PageNotFoundComponent } */
+	{ path: "", component: SearchPageComponent },
+	{ path: "not-found", component: PageNotFoundComponent },
+	{ path: "info", component: InfoPageComponent }
+	/* { path: "**", component: PageNotFoundComponent } */
 ];
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    SearchPageComponent,
-    PageNotFoundComponent,
-    InfoPageComponent,
-    SearchBoxComponent,
-    SearchresultsComponent
-  ],
-  imports: [
-	BrowserModule,
-	RouterModule.forRoot(appRoutes),
-	HttpModule,
-	FormsModule,
-	ReactiveFormsModule
-  ],
-  providers: [
-	  MovieQuotesService
-  ],
-  bootstrap: [AppComponent]
+	declarations: [
+		AppComponent,
+		HeaderComponent,
+		FooterComponent,
+		SearchPageComponent,
+		PageNotFoundComponent,
+		InfoPageComponent,
+		SearchBoxComponent,
+		SearchresultsComponent
+	],
+	imports: [
+		BrowserModule,
+		RouterModule.forRoot(appRoutes),
+		HttpModule,
+		FormsModule,
+		ReactiveFormsModule
+	],
+	providers: [MovieQuotesService, SearchService],
+	bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
