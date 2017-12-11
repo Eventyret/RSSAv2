@@ -3,20 +3,15 @@
 		<div class="jumbotron vertical-center" id="search">
 			<div class="row">
 				<form [formGroup]="form">
-					<div class="input-group">
-						<input
-						formControlName="search"
-						type="text"
-						class="form-control"
-						id="searchText"
-						placeholder="Search for any move or series and press enter..."
-						>
+					<div class="input-group input-group-lg">
+						<input formControlName="search" type="text" class="form-control" id="searchText" placeholder="Search for any move or series and press enter...">
 						<span class="input-group-btn">
-							<input type="submit" id="searchbutton" class="btn btn-primary" value="Go">
+							<input type="submit" id="searchbutton" (click)="searchMovies(searchQuery)" class="btn btn-primary" value="Go" [disabled]="!search.valid">
 						</span>
 					</div>
 				</form>
 			</div>
+			<div class="alert alert-danger" *ngIf="search.invalid">Error</div>
 		</div>
 	</div>
 </div>
