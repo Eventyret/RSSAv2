@@ -2,10 +2,15 @@
 	<div class="row">
 		<div class="jumbotron vertical-center" id="search">
 			<div class="row">
-				<form id="searchForm">
+				<form [formGroup]="form">
 					<div class="input-group">
-						<input type="text" class="form-control" id="searchText" placeholder="Search for any move or series and press enter..." autofocus
-						 required>
+						<input
+						formControlName="search"
+						type="text"
+						class="form-control"
+						id="searchText"
+						placeholder="Search for any move or series and press enter..."
+						>
 						<span class="input-group-btn">
 							<input type="submit" id="searchbutton" class="btn btn-primary" value="Go">
 						</span>

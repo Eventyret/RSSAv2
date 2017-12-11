@@ -11,6 +11,7 @@ import { MovieQuotesService } from "./services/movie-quotes.service";
 import { HttpModule } from "@angular/http";
 import { InfoPageComponent } from "./pages/info-page/info-page.component";
 import { SearchBoxComponent } from "./components/search-page/searchbox/searchbox.component";
+import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 
 const appRoutes: Routes = [
 { path: "", component: SearchPageComponent },
@@ -31,7 +32,9 @@ const appRoutes: Routes = [
   imports: [
 	BrowserModule,
 	RouterModule.forRoot(appRoutes),
-	HttpModule
+	HttpModule,
+	FormsModule,
+	ReactiveFormsModule
   ],
   providers: [
 	  MovieQuotesService
