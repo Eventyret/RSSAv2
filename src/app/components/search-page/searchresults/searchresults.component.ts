@@ -11,11 +11,10 @@ export class SearchresultsComponent implements OnChanges, AfterViewInit {
 	@Input("results") results: any[];
 	radarResults: any[];
 	movies: Object;
-
+	loading  = true;
 	constructor(private radarr: RadarrService) {}
 
 	ngOnChanges() {
-		console.log(this.results);
 	}
 	getResults() {
 		return this.radarr.getResultsFromRadarr().subscribe(data => {
@@ -24,10 +23,12 @@ export class SearchresultsComponent implements OnChanges, AfterViewInit {
 			for (const movie of this.radarResults) {
 				this.movies[movie.imdbId] = movie;
 			}
+			this.loading = false;
 			console.log(this.movies);
 		});
 	}
-	ngAfterViewInit(){
+	ngAfterViewInit() {
+		console.log(this.results)
 		this.getResults();
 	}
 }
