@@ -46,8 +46,9 @@ Info Components
 
 Services
 	☐ FanArt Api (Backgrounds)
-	✔ OMDB Api @done (2017-12-11 21:49:55)
-	☐  Radarr & Sonarr Api
+	✔ OMDB API @done (2017-12-11 21:49:55)
+	✔ Radarr API @done (2017-12-12 19:16:27)
+	☐  Sonarr API
 	✔ Quote API @done (2017-12-10 21:26:39)
 
 ErrorHandling
