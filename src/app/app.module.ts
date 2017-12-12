@@ -1,3 +1,4 @@
+import { RadarrService } from './services/radarr.service';
 import { SearchService } from "./services/search.service";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
@@ -39,7 +40,10 @@ const appRoutes: Routes = [
 		FormsModule,
 		ReactiveFormsModule
 	],
-	providers: [MovieQuotesService, SearchService],
+	providers: [
+		MovieQuotesService,
+		SearchService,
+		RadarrService],
 	bootstrap: [AppComponent]
 })
 export class AppModule {}
