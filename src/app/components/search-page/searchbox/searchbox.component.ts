@@ -8,7 +8,7 @@ import { FormGroup, FormControl, Validators } from "@angular/forms";
 	styleUrls: ["./searchbox.component.scss"]
 })
 export class SearchBoxComponent {
-	@Output() ResultsEmitted = new EventEmitter<any>()
+	@Output() ResultsEmitted = new EventEmitter<any>();
 	// Form Control
 	form = new FormGroup({
 		search: new FormControl("", Validators.required)
