@@ -8,7 +8,7 @@ import { FormGroup, FormControl, Validators } from "@angular/forms";
 	styleUrls: ["./searchbox.component.scss"]
 })
 export class SearchBoxComponent {
-	@Output("onResults") onResultsEmitted = new EventEmitter<any>()
+	@Output() ResultsEmitted = new EventEmitter<any>()
 	// Form Control
 	form = new FormGroup({
 		search: new FormControl("", Validators.required)
@@ -21,7 +21,7 @@ export class SearchBoxComponent {
 
 	searchMovies(query: string) {
 		return this.omdbSearch.onlineSearch(query).subscribe(data => {
-			this.onResultsEmitted.emit(data.Search);
+			this.ResultsEmitted.emit(data.Search);
 		});
 	}
 }
