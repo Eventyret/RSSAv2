@@ -6,14 +6,13 @@ import "rxjs/add/operator/catch";
 
 @Injectable()
 export class RadarrService {
-	private RADARR_KEY: string = environment.RADARR_KEY;
-	private RADAR_URL: string = environment.RADARR_URL;
-	private RADAR_STRING: string = "?apikey=" + this.RADARR_KEY;
+	private URL: string = environment.RADARR_URL;
+	private KEY: string = environment.RADARR_KEY;
+	private STRING: string = "?apikey=" + this.KEY;
 
 	constructor(private http: Http) {}
 
-	getResultsFromRadarr(){
-		return this.http.get(this.RADAR_URL + this.RADAR_STRING)
-		.map(res => res.json());
+	getResultsFromRadarr() {
+		return this.http.get(this.URL + this.STRING).map(res => res.json());
 	}
 }

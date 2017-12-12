@@ -1,3 +1,4 @@
+import { RadarrService } from './../../../services/radarr.service';
 import { SearchService } from "./../../../services/search.service";
 import { Component, Output, EventEmitter } from "@angular/core";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
@@ -9,6 +10,7 @@ import { FormGroup, FormControl, Validators } from "@angular/forms";
 })
 export class SearchBoxComponent {
 	@Output() ResultsEmitted = new EventEmitter<any>();
+	@Output() RadarrResults = new EventEmitter<any>();
 	// Form Control
 	form = new FormGroup({
 		search: new FormControl("", Validators.required)
