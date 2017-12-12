@@ -11,6 +11,7 @@ import { FormGroup, FormControl, Validators } from "@angular/forms";
 export class SearchBoxComponent {
 	@Output() ResultsEmitted = new EventEmitter<any>();
 	@Output() RadarrResults = new EventEmitter<any>();
+	@Output() LoadingEmitter = new EventEmitter<boolean>();
 	// Form Control
 	form = new FormGroup({
 		search: new FormControl("", Validators.required)
@@ -23,6 +24,7 @@ export class SearchBoxComponent {
 
 	searchMovies(query: string) {
 		return this.omdbSearch.onlineSearch(query).subscribe(data => {
+		    this.LoadingEmitter.emit(true);
 			this.ResultsEmitted.emit(data.Search);
 		});
 	}
