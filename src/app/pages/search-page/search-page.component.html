@@ -1,4 +1,4 @@
 <app-header></app-header>
-<search-box (ResultsEmitted)="onResultsEmitted($event)" ></search-box>
-<search-results [results]="results" *ngIf="results"></search-results>
+<search-box (ResultsEmitted)="onResultsEmitted($event)" (LoadingEmitter)="onLoadEmitted($event)"></search-box>
+<search-results [results]="results" [isLoading]="isLoading"></search-results>
 <app-footer></app-footer>

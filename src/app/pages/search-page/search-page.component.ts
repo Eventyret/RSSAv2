@@ -7,9 +7,14 @@ import { Component } from "@angular/core";
 })
 export class SearchPageComponent {
 	results: any[];
+	isLoading = true;
 	constructor() {}
 
 	onResultsEmitted(event) {
 		this.results = event;
 	}
+
+	onLoadEmitted(event) {
+	    this.isLoading = false;
+    }
 }
