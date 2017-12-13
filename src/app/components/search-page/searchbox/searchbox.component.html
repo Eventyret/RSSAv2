@@ -1,10 +1,10 @@
 <div class="container">
-	<div class="row">
-		<div class="jumbotron vertical-center" id="search">
-			<div class="row">
-				<form [formGroup]="form">
+		<div class="col-xs-12">
+			<div class="jumbotron vertical-center" id="search">
+				<form id="searchForm">
 					<div class="input-group input-group-lg">
-						<input formControlName="search" type="text" class="form-control" id="searchText" [(ngModel)]="searchQuery" placeholder="Search for any move or series and press enter...">
+						<input type="text" class="form-control" id="searchText" name="search" [(ngModel)]="searchQuery" ngModel name="search" #search="ngModel"
+						 placeholder="Search for any move or series and press enter..." autofocus required [attr.disabled]="LoadingEmitter == true ? false : null">
 						<span class="input-group-btn">
 							<input type="submit" id="searchbutton" (click)="searchMovies(searchQuery)" class="btn btn-primary" value="Go" [disabled]="!search.valid">
 						</span>
@@ -12,5 +12,4 @@
 				</form>
 			</div>
 		</div>
-	</div>
 </div>
