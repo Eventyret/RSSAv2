@@ -70,3 +70,10 @@ Misc Components
 		✔ Generate Component @done (2017-12-12 21:37:38)
 		✔ Style Component @done (2017-12-13 07:41:41)
 		✔ Wire up Component @done (2017-12-13 07:41:43)
+
+
+Search Logic
+
+	-Misc
+	☐ Match Search
+	☐ IF / Else logic on Matched Search
