@@ -18,7 +18,7 @@ Search Components
   -Search Results
 	✔ Generate Component @done (2017-12-11 21:49:43)
   	☐ Style Component
-  	☐ Wire up Component
+  	✔ Wire up Component @done (2017-12-13 07:44:04)
   	✔ Input & Output @done (2017-12-11 23:36:51)
 
 Info Components
@@ -28,7 +28,7 @@ Info Components
 	☐ Style Component
   	☐ Wire up Component
 
-  -Infobox
+  -Info Card
 	☐Generate Component
 	☐ Style Component
   	☐ Wire up Component
