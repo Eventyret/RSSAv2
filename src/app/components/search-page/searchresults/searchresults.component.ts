@@ -9,6 +9,7 @@ import { Http } from "@angular/http";
 })
 export class SearchresultsComponent implements OnChanges, AfterViewInit {
 	@Input("results") results: any[];
+	@Input("isLoading") isLoading = true;
 	radarResults: any[];
 	movies: Object;
 	loading  = true;
@@ -28,7 +29,6 @@ export class SearchresultsComponent implements OnChanges, AfterViewInit {
 		});
 	}
 	ngAfterViewInit() {
-		console.log(this.results)
 		this.getResults();
 	}
 }

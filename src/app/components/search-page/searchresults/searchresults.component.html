@@ -1,5 +1,10 @@
-<loading-spinner *ngIf="loading"></loading-spinner>
-<p>
-  searchresults works!
-</p>
+<div *ngIf="!isLoading;else loading">
+	- searchresults works!
+	<pre *ngIf="results">
+ {{results | json}}
+  </pre>
+</div>
 
+<ng-template #loading>
+	Let's search for movies
+</ng-template>
