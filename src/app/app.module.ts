@@ -1,4 +1,4 @@
-import { RadarrService } from './services/radarr.service';
+import { RadarrService } from "./services/radarr.service";
 import { SearchService } from "./services/search.service";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
@@ -15,6 +15,7 @@ import { InfoPageComponent } from "./pages/info-page/info-page.component";
 import { SearchBoxComponent } from "./components/search-page/searchbox/searchbox.component";
 import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 import { SearchresultsComponent } from "./components/search-page/searchresults/searchresults.component";
+import { LoadingSpinnerComponent } from "./common/loading-spinner/loading-spinner.component";
 
 const appRoutes: Routes = [
 	{ path: "", component: SearchPageComponent },
@@ -31,7 +32,8 @@ const appRoutes: Routes = [
 		PageNotFoundComponent,
 		InfoPageComponent,
 		SearchBoxComponent,
-		SearchresultsComponent
+		SearchresultsComponent,
+		LoadingSpinnerComponent
 	],
 	imports: [
 		BrowserModule,
