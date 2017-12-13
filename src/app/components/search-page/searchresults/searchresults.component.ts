@@ -10,8 +10,9 @@ import { Http } from "@angular/http";
 export class SearchresultsComponent implements OnChanges, AfterViewInit {
 	@Input("results") results: any[];
 	@Input("isLoading") isLoading = true;
+	radarrReady = true;
 	radarResults: any[];
-	movies: Object;
+	movies: any;
 	loading  = true;
 	constructor(private radarr: RadarrService) {}
 

@@ -1,4 +1,4 @@
-<div *ngIf="!isLoading;else loading">
+<div *ngIf="!isLoading && radarrReady;else loading">
 	- searchresults works!
 	<pre *ngIf="results">
  {{results | json}}
@@ -7,5 +7,4 @@
 
 <ng-template #loading>
 	<div class="text-center">Loading animation or help text here</div>
-
 </ng-template>
