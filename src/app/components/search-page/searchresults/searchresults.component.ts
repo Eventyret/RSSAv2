@@ -1,4 +1,4 @@
-import { RadarrService } from './../../../services/radarr.service';
+import { RadarrService } from "./../../../services/radarr.service";
 import { Component, Input, OnChanges, AfterViewInit } from "@angular/core";
 import { Http } from "@angular/http";
 
@@ -10,9 +10,8 @@ import { Http } from "@angular/http";
 export class SearchresultsComponent implements OnChanges, AfterViewInit {
 	@Input("results") results: any[];
 	@Input("isLoading") isLoading = true;
-	radarrReady = true;
 	radarResults: any[];
-	movies: any;
+	movies: Object[];
 	loading  = true;
 	constructor(private radarr: RadarrService) {}
 
@@ -21,7 +20,7 @@ export class SearchresultsComponent implements OnChanges, AfterViewInit {
 	getResults() {
 		return this.radarr.getResultsFromRadarr().subscribe(data => {
 			this.radarResults = data;
-			this.movies = {};
+			this.movies = [];
 			for (const movie of this.radarResults) {
 				this.movies[movie.imdbId] = movie;
 			}
